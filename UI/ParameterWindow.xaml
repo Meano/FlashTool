@@ -1,0 +1,17 @@
+﻿<Window x:Class="SMTool.UI.ParameterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ParameterWindow" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" UseLayoutRounding="False" ShowInTaskbar="False" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Padding="0" WindowStyle="ToolWindow" AllowDrop="True">
+    <Grid VerticalAlignment="Center" Margin="20
+          " HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="ParameterGrids" HorizontalAlignment="Center" MinWidth="300" Margin="0,10"/>
+        <Button x:Name="ConfirmButton" Content="确定" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Margin="112,0,112,10" Height="25" Grid.Row="1" Click="ConfirmButton_Click"/>
+    </Grid>
+</Window>

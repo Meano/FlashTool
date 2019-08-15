@@ -1,0 +1,28 @@
+﻿<Grid x:Class="SMTool.UI.ParameterGrid"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ui="clr-namespace:SMTool.UI"
+      mc:Ignorable="d" MinWidth="350" 
+      Background="White" Margin="0" AllowDrop="True">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Label x:Name="ParaNameLabel" HorizontalAlignment="Left" Width="80" Height="30" Margin="0,5,0,0" VerticalAlignment="Top" Padding="0" MouseEnter="ParaNameLabel_MouseEnter" MouseLeave="ParaNameLabel_MouseLeave">
+        <Grid>
+            <Label x:Name="ParaNameLabelText" Padding="0,5" Width="80" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Button x:Name="ParaGeneratorButton" Content="生成" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Width="80" Height="30" Click="ParaGeneratorButton_Click" Visibility="Hidden"/>
+        </Grid>
+    </Label>
+    <TextBox x:Name="ParaValueTextBox" TextWrapping="Wrap"
+             InputMethod.IsInputMethodEnabled="False"
+             Margin="85,5,0,0"
+             VerticalContentAlignment="Center"
+             VerticalAlignment="Top" TextChanged="ParaValueTextBox_TextChanged" Width="275" MinHeight="30" MaxHeight="200" PreviewDrop="ParaValueTextBox_PreviewDrop" PreviewDragEnter="ParaValueTextBox_PreviewDragEnter" PreviewDragOver="ParaValueTextBox_PreviewDragEnter"/>
+    <Label x:Name="ParaInfoLabel" Margin="85,0,0,5" Width="275" Grid.Row="1">
+        <TextBlock x:Name="ParaInfoLabelText" TextWrapping="Wrap"></TextBlock>
+    </Label>
+    <ComboBox x:Name="ParaValueComboBox" VerticalAlignment="Top" Margin="85,5,0,0" Height="30" SelectionChanged="ParaValueComboBox_SelectionChanged" VerticalContentAlignment="Center" Width="275"/>
+</Grid>
